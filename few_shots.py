@@ -1,5 +1,5 @@
 import json
-from turtle import pd
+import pandas as pd
 
 
 class FewShotsPost:
