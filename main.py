@@ -21,7 +21,7 @@ def main():
     # ---------- HERO SECTION ----------
     st.markdown(
         """
-        <h1 style='text-align:center;'>🚀 LinkedIn Post Generator</h1>
+        <h1 style='text-align:center;'>🚀 Social Post Generator</h1>
         <p style='text-align:center; color: gray;'>
         Create high-quality LinkedIn posts using AI in seconds
         </p>
