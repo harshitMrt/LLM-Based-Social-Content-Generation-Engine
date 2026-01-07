@@ -48,5 +48,5 @@ def generate_post(topic, length, language):
     return res.content
 
 if __name__ == "__main__":
-    post = get_prompt("Mental Health" , "Medium" , "Hinglish")
+    post = generate_post("Mental Health" , "Medium" , "Hinglish")
     print(post)
