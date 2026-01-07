@@ -102,22 +102,20 @@ def main():
                 white-space:pre-wrap;
                 line-height:1.6;
             ">{post}</textarea>
-            
-            <div style='text-align:center; color:gray; margin-bottom:20px;'>
-            <button onclick="navigator.clipboard.writeText(document.getElementById('postBox').value)"
-            style="
-                margin-top:12px;
-                padding:10px 16px;
-                border-radius:8px;
-                text-align:center;
-                border:none;
-                background:#3B82F6;
-                color:white;
-                cursor:pointer;
-                font-size:14px;
-            ">
-            📋 Copy Post
-            </button>
+
+            <div style="display:flex; justify-content:center; margin-top:15px;">
+                <button onclick="navigator.clipboard.writeText(document.getElementById('postBox').value)"
+                style="
+                    padding:10px 16px;
+                    border-radius:8px;
+                    border:none;
+                    background:#3B82F6;
+                    color:white;
+                    cursor:pointer;
+                    font-size:14px;
+                ">
+                📋 Copy Post
+                </button>
             </div>
             """,
             unsafe_allow_html=True
