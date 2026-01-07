@@ -1,5 +1,7 @@
-An **AI-powered LinkedIn content generation system** that analyzes a user’s historical LinkedIn posts and generates new, highly personalized posts using **LLMs, prompt chaining, and few-shot learning**, all through an interactive **Streamlit interface**.
+## Wokring App Link 
+https://contentify-ai.streamlit.app/
 
+An **AI-powered LinkedIn content generation system** that analyzes a user’s historical LinkedIn posts and generates new, highly personalized posts using **LLMs, prompt chaining, and few-shot learning**, all through an interactive **Streamlit interface**.
 ---
 
 ## ✨ Features
