@@ -1,4 +1,9 @@
 import streamlit as st
+import streamlit.components.v1 as components
+import html
+import streamlit.components.v1 as components
+import html
+
 from few_shots import FewShotsPost
 from post_generator import generate_post
 
@@ -84,43 +89,53 @@ def main():
                 selected_language
             )
 
-        # Ensure post is a clean string and safe for HTML
         post = html.escape(str(post))
 
         st.markdown("### 📄 Generated Post")
 
         components.html(
             f"""
-            <textarea id="postBox" style="
+            <div style="
                 width:100%;
-                height:320px;
-                padding:15px;
-                font-size:15px;
-                border-radius:10px;
-                background:#111827;
-                color:white;
-                border:1px solid #374151;
-                resize:none;
-                white-space:pre-wrap;
-                line-height:1.6;
-            ">{post}</textarea>
-
-            <div style="display:flex; justify-content:center; margin-top:15px;">
-                <button onclick="navigator.clipboard.writeText(document.getElementById('postBox').value)"
-                style="
-                    padding:10px 16px;
-                    border-radius:8px;
-                    border:none;
-                    background:#3B82F6;
+                box-sizing:border-box;
+            ">
+                <textarea id="postBox" style="
+                    width:100%;
+                    height:360px;
+                    padding:16px;
+                    font-size:15px;
+                    border-radius:10px;
+                    background:#111827;
                     color:white;
-                    cursor:pointer;
-                    font-size:14px;
+                    border:1px solid #374151;
+                    resize:none;
+                    white-space:pre-wrap;
+                    line-height:1.6;
+                    box-sizing:border-box;
+                ">{post}</textarea>
+
+                <div style="
+                    display:flex;
+                    justify-content:center;
+                    margin-top:16px;
                 ">
-                📋 Copy Post
-                </button>
+                    <button onclick="navigator.clipboard.writeText(document.getElementById('postBox').value)"
+                    style="
+                        padding:10px 18px;
+                        border-radius:8px;
+                        border:none;
+                        background:#3B82F6;
+                        color:white;
+                        cursor:pointer;
+                        font-size:14px;
+                        font-weight:600;
+                    ">
+                    📋 Copy Post
+                    </button>
+                </div>
             </div>
             """,
-            height=420,
+            height=460,  # 🔑 KEY FIX: enough height for all content
         )
 
         st.success("✅ Post generated successfully! Ready to post on LinkedIn 🚀")
