@@ -3,8 +3,14 @@ import os
 from langchain_groq import ChatGroq
 
 load_dotenv()
+#
+# llm = ChatGroq(groq_api_key=os.getenv("GROQ_API_KEY"), model_name="llama-3.3-70b-versatile", temperature=0.9)
 
-llm = ChatGroq(groq_api_key=os.getenv("GROQ_API_KEY"), model_name="llama-3.3-70b-versatile", temperature=0.9)
+llm = ChatGroq(
+    api_key=os.getenv("GROQ_API_KEY"),
+    model="llama-3.3-70b-versatile",
+    temperature=0.7,
+)
 
 if __name__ == "__main__":
     result = llm.invoke("Main ingredients in samosa")
