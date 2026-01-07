@@ -9,7 +9,7 @@ from post_generator import generate_post
 
 # Page config (VERY IMPORTANT – put at top)
 st.set_page_config(
-    page_title="LinkedIn Post Generator",
+    page_title="Social Post Generator",
     page_icon="💼",
     layout="centered"
 )
