@@ -9,7 +9,7 @@ from post_generator import generate_post
 
 # Page config (VERY IMPORTANT – put at top)
 st.set_page_config(
-    page_title="Social Post Generator",
+    page_title="LinkedIn Post Generator",
     page_icon="💼",
     layout="centered"
 )
@@ -21,7 +21,7 @@ def main():
     # ---------- HERO SECTION ----------
     st.markdown(
         """
-        <h1 style='text-align:center;'>🚀 Social Post Generator</h1>
+        <h1 style='text-align:center;'>🚀 LinkedIn Post Generator</h1>
         <p style='text-align:center; color: gray;'>
         Create high-quality LinkedIn posts using AI in seconds
         </p>
