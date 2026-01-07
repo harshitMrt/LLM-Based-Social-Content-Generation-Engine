@@ -84,10 +84,12 @@ def main():
                 selected_language
             )
 
+        # Ensure post is a clean string and safe for HTML
+        post = html.escape(str(post))
+
         st.markdown("### 📄 Generated Post")
 
-        # ---------- SOFT WRAP + COPY BUTTON ----------
-        st.markdown(
+        components.html(
             f"""
             <textarea id="postBox" style="
                 width:100%;
@@ -118,7 +120,7 @@ def main():
                 </button>
             </div>
             """,
-            unsafe_allow_html=True
+            height=420,
         )
 
         st.success("✅ Post generated successfully! Ready to post on LinkedIn 🚀")
